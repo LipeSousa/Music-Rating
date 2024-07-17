@@ -1,0 +1,597 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* chamar as cores por var */
+
+:root{
+    --purple:#8e44ad;
+    --red:#c0392b;
+    --orange:#f39c12;
+    --yellow: rgb(233, 233, 14);
+    --black:#222;
+    --white:#fff;
+    --green: #4d973e;
+    --light-blue:#0062b1;
+    --light-green:#6abf57;
+    --light-color:#666;
+    --light-white:#ccc;
+    --light-bg:#f5f5f5;
+    --border:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+ 
+/* Configuração Geral, barra de rolagem */
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition:all .2s linear;
+}
+
+*::selection{
+    background-color: var(--purple);
+    color:var(--white);
+}
+ 
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+ 
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+ }
+ 
+*::-webkit-scrollbar-thumb{
+    background-color: var(--light-color);
+}
+
+ html{
+    font-size: 62.5%;
+}
+
+/*              */
+
+.message{
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap: 1.5rem;
+}
+
+.massage span {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.message i{
+    cursor: pointer;
+    color: var(--red);
+    font-size: 2.5rem;
+
+}
+
+.message i:hover{
+    transform: rotate(90deg);
+    
+}
+
+/* botões utilizáveis */
+
+.btn, .option-btn, .delete-btn, .blue-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+}
+
+.blue-btn:hover, .option-btn:hover, .delete-btn:hover{
+    background-color: var(--light-green);
+}
+
+.blue-btn{
+    background-color: var(--light-blue);
+}
+
+.option-btn{
+    background-color: var(--green);
+}
+
+.delete-btn{
+    background-color: var(--red);
+}
+
+/* Forms das páginas de LOGIN é REGISTRO */
+
+.form-container{
+    min-height: 100vh;
+    background-image: url('https://moewalls.com/wp-content/uploads/2023/08/jake-listens-to-music-alone-at-night-adventure-time-thumb.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-container form {
+    width: 50rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: 2px solid white;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    text-align: center;
+}
+
+.form-container form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+    letter-spacing: 0.05em;
+}
+
+.form-container form .box {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.05em;
+    width: 100%;
+    border-radius: .5rem;
+    background-color: transparent;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    border: none;
+    border-bottom: 1px solid var(--white);
+    margin: 1rem 0;
+}
+
+.form-container form select:focus{
+    color: var(--black);
+}
+
+.form-container form .box::placeholder {
+    color: var(--white);
+}
+
+.form-container form p {
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.form-container form p a{ 
+    color: var(--yellow);
+}
+
+.form-container form p a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-image: url(https://moewalls.com/wp-content/uploads/2023/08/jake-listens-to-music-alone-at-night-adventure-time-thumb.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    z-index: 1;
+}
+
+/* Perfil */
+
+.user-container {
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    letter-spacing: 0.05rem;
+}
+
+.user {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    border-radius: .5rem 0 0 .5rem;
+    width: 31%;
+    height: 55%;
+    margin-left: 20%;
+
+    button {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: .5rem;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(58, 185, 54);
+        color: #fff;
+        }
+    
+    button:hover {
+            background-color: rgb(101, 184, 99);
+        }
+
+    a {
+        margin-left: 50px;
+    }
+}
+
+.user .user-text {
+    margin-left: 10px;
+    flex-direction: column;
+    text-align: start;
+    font-size: 1.2rem;
+
+    img {
+        position: relative;
+        top: 9px;
+        margin-right: 5px;
+    }
+
+    input {
+        background-color: transparent;
+        border-bottom: 1px solid black;
+    }
+}
+
+.user-container aside {
+    height: 55%;
+    width: 30%;
+    float: left;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 .5rem .5rem 0;
+
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    input{
+        margin-bottom: 10px;
+        margin-left: 20%;
+        width: 60%;
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: .5rem;
+        padding: 2px;
+    }
+
+    button {
+        margin-left: 35%;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: .5rem;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(185, 54, 54);
+        color: #fff;
+        }
+
+        button:hover {
+            background-color: rgb(175, 87, 87);
+        }
+}
+
+
+/* Header das páginas */
+
+header {
+    z-index: 2;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: saturate(180%), blur(20%);
+    padding: 1rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: #ddbaba;
+}
+
+ul li .logout {
+    padding: 15px;
+}
+
+/* Caixa com as inforamçoes do usuário */
+
+header ul #account-box{
+    text-align: center;
+    justify-content: center;
+    z-index: 10;
+    display: none;
+    width: 300px;
+    height: 150px;
+    background-color: rgba(241, 236, 236, 0.7);
+    backdrop-filter: saturate(180%), blur(20%);
+    position: fixed;
+    top: 50px; 
+    left: 81%;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+header ul #account-box p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+header ul #account-box span {
+    position: relative;
+    top: -10px;
+    left: 5px;
+    font-size: 1.5rem;
+}
+
+#action-btn {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Informações da página HOME */
+
+.container {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inf-container {
+    padding: 40px;
+    width: 50%;
+    background-color: transparent;
+    backdrop-filter: blur(105px);
+    border: 2px solid black;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inf-container h1 {
+    margin-bottom: 10px;
+    font-size: 3rem;
+}
+
+.inf-container p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.inf-container a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #0062b1;
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inf-container a:hover{
+    background-color: #5787ad;
+}
+
+/* Footer */
+
+footer .sponsors ul li p {
+    color: #fff;
+    margin-left: -6px;
+    font-size: 1.1rem;
+}
+
+footer .sponsors ul li .correct{
+    margin-left: 6px;
+}
+
+footer .sponsors ul li .correct-01{
+    margin-left: -12px;
+}
+
+/* Página de Avaliação */
+
+.ava-container {
+    position: relative;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    left: 14%;
+    top: 10%;
+    min-height: 100vh;
+    width: 150vh;
+    border: 1px solid white;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.ava-container h1{
+    color: #fff;
+}
+
+/* Comentários */
+
+.ava-container p {
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+.area-comentario{
+    color: var(--light-bg);
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    width: 97%;
+    height: 5rem;
+    margin: 20px;
+    padding: 5px;
+    resize: none;
+}
+
+.area-music{
+    color: var(--light-bg);
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    width: 97%;
+    height: 2.5rem;
+    margin: 20px;
+    padding: 3px;
+    resize: none;
+}
+
+.area-music::placeholder {
+    color: #8a8a8f;
+}
+
+.ava-container .blue-btn {
+    margin: 5px 20px;
+    padding: .5rem 1.5rem;
+    font-size: 1.5rem;
+}
+
+.coment-box {
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    margin: 20px;
+    padding: 10px;
+}
+
+.excluir-btn {
+    position: relative;
+    left: 140vh;
+    top: -4vh;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/deletec.png);
+    background-size: cover;
+    background-color: transparent;
+    text-indent: -9999px;
+    border: none;
+    cursor: pointer;
+}
+
+.comentario {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.data {
+    text-align: end;
+}
+
+/* Página Musica da Semana */
+
+.container-music {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    margin: 0;
+}
+
+.player {
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--light-bg);
+    padding: 25px;
+    width: 305px;
+    text-align: center;
+    color: #fff;
+}
+.player img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+.player img.rotate {
+    animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.player h2 {
+    color: #fff;
+    margin: 10px 0;
+}
+.player button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    outline: none;
+}
+.player button:hover {
+    color: #c0aeae;
+}
+.progress {
+    background-color: #555;
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.progress-bar {
+    background-color: var(--light-bg);
+    height: 100%;
+    border-radius: 100%;
+    width: 0;
+    transition: width 0.1s linear;
+}
+.time {
+    text-align: start;
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
